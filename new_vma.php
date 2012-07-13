@@ -33,25 +33,28 @@
 				<?php
 					$login = $_GET['login'];
 				?>
-				<?php echo "<form action='display_data_after_changing_objectives.php?login=".$login." 'method='post'>"; ?>
-					<p>Please fill this informations.</p>
-					<p>For example, if you will running a Marathon in 6 months and you want to do the Marathon in 4 hours. Fill the 'Delay' with 180 days, 
-					the 'Course' with 42 km and the 'Time' with 240 minutes.</p>
-
-					<p>
-					<label for="course">Select the kind of course you want to do:</label><br/>
-					<select name="course" id="course">
-					<option value="5">5 km</option>
-					<option value="10">10 km</option>
-					<option value="21">Semi-Marathon (21 km)</option>
-					<option value="42">Marathon (42 km)</option>
-					</select>
-					</p>	
-					<p><label>Delay (days)</label> : </br><input type="number" name="delay" /></p>
-					<p><label>Time(minutes)</label> : </br><input type="number" name="time" /></p>
-					<input type="submit" value="Done" />
+				<?php echo "<form action='display_data_after_vma.php?login=".$login." 'method='post'>"; ?>
+					<p>VMA: Maximum Aerobic Speed (km / h). Movement speed of a person who consumes 100% of its maximum flow rate of O2 (VO2 max). 
+					To establish your VMA without laboratory testing, take the maximum distance runed in 6 minutes, and divide it by 100. 
+					We will use the Half Cooper method. 
+					Example: A runner who runs 1350 meters in 6 minutes will have a VMA of 1350: 100 = 13.5 km / h</p>
+					<p><label>VMA (km/h)</label> : </br><input type="number" name="vma" /></p>
+										<p><label class="description" for="element_2">Date of the training :</label></br>
+					<span>
+						<input id="element_2_1" name="element_2_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+						<label for="element_2_1">MM</label>
+					</span>
+					<span>
+						<input id="element_2_2" name="element_2_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+						<label for="element_2_2">JJ</label>
+					</span>
+					<span>
+						<input id="element_2_3" name="element_2_3" class="element text" size="4" maxlength="4" value="" type="text">
+						<label for="element_2_3">AAAA</label>
+					</span></br></br>
+					<input type="submit" value="Confirm" />
+					<p>Doing this test quickly can help us to improve your training.</p>
 				</form>
-				<p>And just let the Running App' shows you the way to success!</p>
 				</article>
                 <aside>
                     <h1>About us</h1>

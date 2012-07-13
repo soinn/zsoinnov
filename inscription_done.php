@@ -57,6 +57,36 @@
 				
 				fclose($fp);
 				
+				$filename = "user/".$file."_weight.txt";
+				$fp = fopen($filename, "w+");
+				fputs($fp, "NO,Temp,Time");
+				fputs($fp, "\n");
+				fclose($fp);
+				
+				$filename = "user/".$file."_vma.txt";
+				$fp = fopen($filename, "w+");
+				fputs($fp, "NO,Temp,Time");
+				fputs($fp, "\n");
+				fclose($fp);
+				
+				$filename = "user/".$file."_frequence.txt";
+				$fp = fopen($filename, "w+");
+				fputs($fp, "NO,Temp,Time");
+				fputs($fp, "\n");
+				fclose($fp);
+				
+				$filename = "user/".$file."_duration.txt";
+				$fp = fopen($filename, "w+");
+				fputs($fp, "NO,Temp,Time");
+				fputs($fp, "\n");
+				fclose($fp);
+				
+				$filename = "user/".$file."_distance.txt";
+				$fp = fopen($filename, "w+");
+				fputs($fp, "NO,Temp,Time");
+				fputs($fp, "\n");
+				fclose($fp);
+				
 				?>
 				<p>Thanks.</p>
 				<?php

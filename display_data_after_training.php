@@ -64,32 +64,32 @@
 					
 					$filename = "user/".$login."_weight.txt";
 					$fp = fopen($filename, "a+");
-					fputs($fp, $weight.",".$mm.$jj.$aa);
+					fputs($fp, "1,".$weight.",".$mm."/".$jj);
 					fputs($fp, "\n");				
 					fclose($fp);
 					
 					$filename = "user/".$login."_frequence.txt";
 					$fp = fopen($filename, "a+");
-					fputs($fp, $frequence.",".$mm.$jj.$aa);
+					fputs($fp, "1,".$frequence.",".$mm."/".$jj);
 					fputs($fp, "\n");				
 					fclose($fp);
 					
 					$filename = "user/".$login."_duration.txt";
 					$fp = fopen($filename, "a+");
-					fputs($fp, $time.",".$mm.$jj.$aa);
+					fputs($fp, "1,".$time.",".$mm."/".$jj);
 					fputs($fp, "\n");				
 					fclose($fp);
 					
 					$filename = "user/".$login."_distance.txt";
 					$fp = fopen($filename, "a+");
-					fputs($fp, $distance.",".$mm.$jj.$aa);
+					fputs($fp, "1,".$distance.",".$mm."/".$jj);
 					fputs($fp, "\n");				
 					fclose($fp);
 					
 					$filename = "user/".$login."_speed.txt";
 					$speed = $distance * 60 / $time;
 					$fp = fopen($filename, "a+");
-					fputs($fp, $speed.",".$mm.$jj.$aa);
+					fputs($fp, "1,".$speed.",".$mm."/".$jj);
 					fputs($fp, "\n");				
 					fclose($fp);
 				
@@ -98,6 +98,8 @@
 						<?php echo "<p><a href='change_data.php?login=".$login." '>Data</a> Change your data (VMA, cardiac frequence...)</p></br>"; ?>
 						<?php echo "<p><a href='change_objectif.php?login=".$login." '>Objectifs</a> Change your objectifs! Get ready for your next challenge!</p></br>"; ?>
 						<?php echo "<p><a href='new_training.php?login=".$login." '>New jogging</a> Every time you run, fill this section and go to the graph section check your progress.</p></br>"; ?>
+						<?php echo "<p><a href='new_vma.php?login=".$login." '>New VMA test</a> Make a new VMA test weekly to improve your performance.</p></br>"; ?>
+						
 					<?php
 				?>
 				</article>

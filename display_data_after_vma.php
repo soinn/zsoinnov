@@ -32,24 +32,18 @@
                 <article>
                 <?php
 					$login = $_GET['login'];
-					$filename = "user/".$login."_objectives.txt";
-					$course = trim($_POST["course"]);
-					$delay = trim($_POST["delay"]);
-					$time = trim($_POST["time"]);
-
-					$fp = fopen($filename, "w+");
+					$mm = trim($_POST["element_2_1"]);
+					$jj = trim($_POST["element_2_2"]);
+					$aa = trim($_POST["element_2_3"]);
 					
-					fputs($fp, $course);
-					fputs($fp, "\n");
-					fputs($fp, $delay);
-					fputs($fp, "\n");
-					fputs($fp, $time);
-					fputs($fp, "\n");
-
+					$filename = "user/".$login."_vma.txt";
+					$vma = trim($_POST["vma"]);
 					
+					$fp = fopen($filename, "a+");
+					fputs($fp, $vma.",".$mm.$jj.$aa);
+					fputs($fp, "\n");				
 					fclose($fp);
 				
-
 					?>
 						<h1>Welcome in your Running Application.</h1></br>
 						<?php echo "<p><a href='change_data.php?login=".$login." '>Data</a> Change your data (VMA, cardiac frequence...)</p></br>"; ?>
